@@ -1,5 +1,5 @@
-# CLIP-Guided-Diffusion
-Just playing with getting CLIP Guided Diffusion running locally, rather than having to use colab. 
+# CLIP-Guided-Diffusion - Windows 10 Version
+Install CLIP Guided Diffusion  locally,On Windows 10. 
 
 Original colab notebooks by Katherine Crowson (https://github.com/crowsonkb, https://twitter.com/RiversHaveWings):
 
