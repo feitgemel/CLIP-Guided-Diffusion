@@ -42,7 +42,7 @@ You may also be interested in [VQGAN-CLIP](https://github.com/nerdyrodent/VQGAN-
 ## Environment
 * Windows 10
 * Anaconda
-* Tested ib Nvidia Geforce GTX 1060 6GB
+* Tested in Nvidia Geforce GTX 1060 6GB
 
 Typical VRAM requirments:
 * 256 defaults: 10 GB
