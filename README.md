@@ -93,14 +93,15 @@ wget https://the-eye.eu/public/AI/models/512x512_diffusion_unconditional_ImageNe
 
 # 256X256 model
 wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt
+```
 
 ```sh
 
 ## Run
 
 The simplest way to run is just to pass in your text prompt. For example:
+```
 
-```sh
 python generate_diffuse.py -p "A painting of an apple"
 ```
 <img src="./Samples/a_painting_of_an_apple.png" width="256px"></img>
