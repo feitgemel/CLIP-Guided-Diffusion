@@ -40,15 +40,18 @@ Some example images:
 You may also be interested in [VQGAN-CLIP](https://github.com/nerdyrodent/VQGAN-CLIP)
 
 ## Environment
-* Ubuntu 20.04 (Windows untested but should work)
+* Windows 10
 * Anaconda
-* Nvidia RTX 3090
+* Tested ib Nvidia Geforce GTX 1060 6GB
 
 Typical VRAM requirments:
 * 256 defaults: 10 GB
 * 512 defaults: 18 GB
 
 ## Set up
+
+
+## Please follow the set up file : CLIP-Guided-Diffusion-setup.txt
 
 This example uses [Anaconda](https://www.anaconda.com/products/individual#Downloads) to manage virtual Python environments.
 
