@@ -100,7 +100,6 @@ wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffu
 ## Run
 
 The simplest way to run is just to pass in your text prompt. For example:
-```
 
 python generate_diffuse.py -p "A painting of an apple"
 ```
