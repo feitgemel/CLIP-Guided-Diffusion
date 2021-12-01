@@ -7,7 +7,6 @@ conda activate cgd
 git clone https://github.com/feitgemel/CLIP-Guided-Diffusion.git
 cd CLIP-Guided-Diffusion
 
-
 #check your Cuda version :
 # how to find my Cuda version
 nvcc --version
