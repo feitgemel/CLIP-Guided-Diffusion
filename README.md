@@ -1,5 +1,5 @@
-# CLIP-Guided-Diffusion
-Just playing with getting CLIP Guided Diffusion running locally, rather than having to use colab. 
+# CLIP-Guided-Diffusion - Windows 10 Version
+Install CLIP Guided Diffusion  locally,On Windows 10. 
 
 Original colab notebooks by Katherine Crowson (https://github.com/crowsonkb, https://twitter.com/RiversHaveWings):
 
@@ -40,15 +40,18 @@ Some example images:
 You may also be interested in [VQGAN-CLIP](https://github.com/nerdyrodent/VQGAN-CLIP)
 
 ## Environment
-* Ubuntu 20.04 (Windows untested but should work)
+* Windows 10
 * Anaconda
-* Nvidia RTX 3090
+* Tested in Nvidia Geforce GTX 1060 6GB
 
 Typical VRAM requirments:
 * 256 defaults: 10 GB
 * 512 defaults: 18 GB
 
 ## Set up
+
+
+## Please follow the set up file : CLIP-Guided-Diffusion-setup.txt
 
 This example uses [Anaconda](https://www.anaconda.com/products/individual#Downloads) to manage virtual Python environments.
 
@@ -64,32 +67,40 @@ git clone https://github.com/nerdyrodent/CLIP-Guided-Diffusion.git
 cd CLIP-Guided-Diffusion
 ```
 
-Run the setup file:
-```sh
-./setup.sh
-```
-
 Or if you want to run the commands manually:
 ```sh
 # Install dependencies
 
-pip3 install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+#check your Cuda version :
+# how to find my Cuda version
+nvcc --version
+
+
+I am installing torch 1.10 and Cuda 11.3 - You should install your Cuda version
+========================================
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+
 git clone https://github.com/openai/CLIP
 git clone https://github.com/crowsonkb/guided-diffusion
 pip install -e ./CLIP
 pip install -e ./guided-diffusion
-pip install lpips matplotlib
+pip install lpips
 
-# Download the diffusion models
+# Download the diffusion models 
+# 512X512 model 
+wget https://the-eye.eu/public/AI/models/512x512_diffusion_unconditional_ImageNet/512x512_diffusion_uncond_finetune_008100.pt
 
-curl -OL --http1.1 'https://the-eye.eu/public/AI/models/512x512_diffusion_unconditional_ImageNet/512x512_diffusion_uncond_finetune_008100.pt'
-curl -OL 'https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt'
+# 256X256 model
+wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt
 ```
+
+```sh
+
 ## Run
 
 The simplest way to run is just to pass in your text prompt. For example:
 
-```sh
 python generate_diffuse.py -p "A painting of an apple"
 ```
 <img src="./Samples/a_painting_of_an_apple.png" width="256px"></img>
